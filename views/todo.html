@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <h1 class="top">Todo List</h1>
+    <form action="/createTodo" method="post">
+        <input name="todo" type="text" id="todo-input" placeholder="Add a new todo"></input>
+        <input name="priority" type="number" min="1" max="9" id="todo-input" placeholder="prty"></input>
+        <button type="submit">Add</button>
+    </form>
+    <div style="text-align: center;" id="counts"></div>
+    <ul id="todo-list">
+    </ul>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+        integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <script src="./todo.js"></script>
+</body>
+
+
+<style>
+    #todo-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #todo-list li {
+        background-color: #fafafa;
+        border-radius: 4px;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .top {
+        display: flex;
+        justify-content: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    i {
+        cursor: pointer;
+        padding: 7px;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    button {
+        background-color: #04AA6D;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    input {
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    h1 {
+        padding-top: 30px;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+</style>
+
+</html>

@@ -1,0 +1,75 @@
+<head>
+    <title>Login Page</title>
+</head>
+
+<body>
+    <h2>Login Form</h2>
+
+    <form>
+        <div class="container">
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <span class="">Don't have a account &nbsp;<a href="/views/singnUp.html">Sign Up</a></span>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./login.js"></script>
+</body>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 30%;
+        margin-top: 60px;
+    }
+
+    h2 {
+        margin-left: 16%;
+    }
+
+    span {
+        display: flex;
+        margin-top: 20px;
+        margin-left: 12%
+    }
+
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #393f83;
+
+    }
+
+    input[type=email],
+    input[type=password] {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        display: flex;
+
+    }
+
+    button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+</style>
